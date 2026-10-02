@@ -26,7 +26,7 @@ The To-Do List Application is a simple task management tool designed to help stu
 | description | String | A short description of what needs to be done |
 | dueDate | String | The date the task should be completed |
 | estimatedTime | int | Estimated number of minutes required to complete the task |
-| status | String | Current task status (Not Started, In Progress, or Completed) |
+| status | String | Current task status (Undone,Done) |
 | notes | String | Additional information or comments about the task |
 | category | String | Type of task (e.g., School, Work, Personal) |
 | priority | String | Priority level of the task (e.g., High, Medium, Low) |
