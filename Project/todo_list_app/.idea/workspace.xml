@@ -101,7 +101,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/yasir/Documents/GitHub/cis2232_f26_project_muhib_yasiral/Project/todo_list_app",
+    "last_opened_file_path": "C:/Users/yasir/Documents/GitHub/cis2232_f26_project_lynch_lindsay/Project/coffee_order_app",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -161,19 +161,6 @@
       <option name="PACKAGE_NAME" value="ca.hccis.squash.rest" />
       <option name="MAIN_CLASS_NAME" value="ca.hccis.squash.rest.SkillsAssessmentSquashTechnicalServiceTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="todo_list_app" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="todo_list_app" />
-      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -269,6 +256,8 @@
       <workItem from="1790631077884" duration="204000" />
       <workItem from="1790631542251" duration="4299000" />
       <workItem from="1790636213418" duration="1444000" />
+      <workItem from="1792169506972" duration="1773000" />
+      <workItem from="1792171610458" duration="1412000" />
     </task>
     <servers />
   </component>
