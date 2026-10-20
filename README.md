@@ -35,12 +35,11 @@ The To-Do List Application is a simple task management tool designed to help stu
 
 
 ## Calculation ##
-The application will calculate the total estimated time for unfinished tasks.
-The calculation will add the estimated time of every task that is not marked as completed (undone).
-
-Example:
-30 minutes + 60 minutes + 45 minutes = 135 minutes of work remaining. 
-The total can also be displayed in hours and minutes. 
+The application will calculate a Priority Score for each task. The score is determined by multiplying the estimated completion time by a priority value (High = 3, Medium = 2, Low = 1). Tasks with higher scores should be completed first.
+ For example:
+* Estimated Time = 60 minutes
+* Priority = High (3)
+* Priority Score = 180 
 ***
 
 ## Report Details 
