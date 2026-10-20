@@ -43,5 +43,6 @@ The application will calculate a Priority Score for each task. The score is dete
 ***
 
 ## Report Details 
-To be determined in a future sprint.
+### Tasks by Category report ###
+Enter a task status (Done or Undone) and the report will return the number of tasks in each category that match the selected status. On the report results page, only show the category name and the task count.
 ***
