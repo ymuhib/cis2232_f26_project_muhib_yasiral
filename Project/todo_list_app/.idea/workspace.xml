@@ -52,7 +52,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="com.intellij.jpb.JpaEntity" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -86,6 +88,7 @@
     "Application.TheApplication.executor": "Run",
     "Database Script.createDatabase.sql.executor": "Run",
     "Database Script.createDatabase1.sql.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
     "JUnit.SkillsAssessmentSquashTechnicalServiceTest.executor": "Run",
     "Maven.squash_skills [package].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -101,7 +104,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/yasir/Documents/GitHub/cis2232_f26_project_lynch_lindsay/Project/coffee_order_app",
+    "last_opened_file_path": "C:/Users/yasir/Documents/GitHub/cis2232_f26_project_muhib_yasiral/Project/todo_list_app",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -120,7 +123,8 @@
     "RunConfigurationTargetLRU": [
       "fa7dea25-c5e1-42f5-8507-f4b65e3ca148",
       "b60683e5-721a-4744-8191-aafa53944307",
-      "132ff2e9-fe6e-4f3b-84b4-a056131f889f"
+      "132ff2e9-fe6e-4f3b-84b4-a056131f889f",
+      "f82435fe-8f9a-4d43-b5d2-47bcdc7187b5"
     ],
     "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
       "MariaDB",
@@ -148,18 +152,19 @@
     <configuration name="createDatabase.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/src/main/resources/db/mysql/createDatabase.sql" />
       <script-mode>FILE</script-mode>
+      <data-source id="f82435fe-8f9a-4d43-b5d2-47bcdc7187b5" />
       <method v="2" />
     </configuration>
     <configuration name="SkillsAssessmentSquashTechnicalServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="todo_list_app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ca.hccis.squash.rest.*" />
+          <option name="PATTERN" value="ca.hccis.task.rest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ca.hccis.squash.rest" />
-      <option name="MAIN_CLASS_NAME" value="ca.hccis.squash.rest.SkillsAssessmentSquashTechnicalServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="ca.hccis.task.rest.SkillsAssessmentSquashTechnicalServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -168,7 +173,7 @@
     <configuration name="TheApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="todo_list_app" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ca.hccis.squash.TheApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ca.hccis.task.TheApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -258,6 +263,7 @@
       <workItem from="1790636213418" duration="1444000" />
       <workItem from="1792169506972" duration="1773000" />
       <workItem from="1792171610458" duration="1412000" />
+      <workItem from="1793366869556" duration="11216000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head">
+    <title id="pageTitle">Tasks by Category Report</title>
+</head>
+<body>
+
+<style scoped="scoped">
+    input:not(.hidden) {
+        display: inline-block;
+        float: right
+    }
+
+    .cd {
+        color: #F00 !important;
+        font-weight: bold;
+        margin-bottom: -48px
+    }
+
+    label {
+        margin-right: 8px
+    }
+</style>
+
+<nav th:replace="fragments/navHeader :: navbar"></nav>
+
+<div class="container has-text-centered">
+
+    <h2 class="title is-2" th:text="#{label.report.task.category.report}">Tasks by Category</h2>
+
+    <form th:action="@{/report/task/category/submit}"
+          method="post"
+          class="wbb"
+          style="display:inline-block;text-align:left!important">
+
+        <label for="status">Choose Task Status:</label>
+
+        <select id="status" th:field="${reportInput.status}">
+            <option value="">-- Select --</option>
+            <option value="Done">Done</option>
+            <option value="Undone">Undone</option>
+        </select>
+
+        <br></br>
+
+        <button style="display:block;margin-top:24px!important"
+                class="centered">Submit</button>
+
+    </form>
+
+    <br></br>
+
+    <p th:if="${not #strings.isEmpty(message)}" th:text="${message}">not found</p>
+
+    <div th:if="${taskCategorySummaries != null and !taskCategorySummaries.isEmpty()}">
+
+        <div style="width: 600px; height: 350px; display: flex;
+                justify-content: center; align-items: center; margin: 0 auto;">
+
+            <div style="width: 400px; height: 250px; position: relative;">
+                <canvas id="reportChart"></canvas>
+            </div>
+
+        </div>
+
+        <script th:inline="javascript">
+
+            const taskData = [[${taskCategorySummaries}]];
+
+            console.log('Task Data:', taskData);
+
+            const categories = taskData.map(item => item.category);
+            const taskCounts = taskData.map(item => item.taskCount);
+
+            const ctx = document.getElementById('reportChart');
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: categories,
+                    datasets: [
+                        {
+                            label: 'Number of Tasks',
+                            data: taskCounts,
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                precision: 0
+                            }
+                        }
+                    }
+                }
+            });
+        </script>
+
+    </div>
+<br></br>
+
+<footer th:replace="fragments/footer :: footer"></footer>
+
+</body>
+</html>
