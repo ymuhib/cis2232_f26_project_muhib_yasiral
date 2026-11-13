@@ -9,7 +9,7 @@ Project repo for CIS 2232 - AOOP
 ***
 
 ## Description
-The To-Do List Application is a simple task management tool designed to help students organize their schoolwork and daily activities. Users can create, update, and delete tasks while tracking important details such as due dates, priorities, categories, and completion status. The application also calculates the total estimated time required to finish all unfinished tasks, helping users better manage their workload.
+The To-Do List Application is a simple task management tool designed to help students organize their schoolwork and daily activities. Users can create, update, and delete tasks while tracking important details such as due dates, priorities, categories, and completion status. The application also calculates the priority score for each task, helping users better manage their workload.
 ***
 
 ## Color 
@@ -30,6 +30,7 @@ The To-Do List Application is a simple task management tool designed to help stu
 | notes | String | Additional information or comments about the task |
 | category | String | Type of task (e.g., School, Work, Personal) |
 | priority | String | Priority level of the task (e.g., High, Medium, Low) |
+| priorityScore | int | The score will be calculated based on the estimated time and priority of each task |
 ***
 
 
