@@ -10,8 +10,7 @@
             <img src="/images/ic_launcher.png" class="logo">
         </a>
 
-        <a role="button" class="navbar-burger burger" aria-label="menu"
-           aria-expanded="false" id="burg"
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" id="burg"
            onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');"
            data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
@@ -21,25 +20,19 @@
     </div>
 
     <div id="navbarBasicExample" class="navbar-menu">
-
         <div class="navbar-end">
 
             <div class="navbar-item has-dropdown is-hoverable">
-                <a th:href="@{/task}" href="/task" class="accent navbar-link">
-                    Tasks
-                </a>
+                <a th:href="@{/task}" href="/task" class="accent navbar-link">Tasks</a>
 
                 <div class="accent-background navbar-dropdown">
-                    <a th:href="@{/task}" class="accent navbar-item">
-                        View
-                    </a>
+                    <a th:href="@{/task}" class="accent navbar-item">View</a>
+                    <a th:href="@{/task/list/edit}" class="accent navbar-item">List Edit</a>
                 </div>
             </div>
 
             <div class="navbar-item has-dropdown is-hoverable">
-                <a th:href="@{/report}" href="/report" class="accent navbar-link">
-                    Reports
-                </a>
+                <a th:href="@{/report}" href="/report" class="accent navbar-link">Reports</a>
 
                 <div class="accent-background navbar-dropdown">
                     <a th:href="@{/report/task/category}"
@@ -51,20 +44,14 @@
             </div>
 
             <div class="navbar-item has-dropdown is-hoverable">
-                <a th:href="@{/about}" href="/about" class="accent navbar-link">
-                    Other
-                </a>
+                <a th:href="@{/about}" href="/about" class="accent navbar-link">Other</a>
 
                 <div class="accent-background navbar-dropdown">
-                    <a th:href="@{/about}" href="/about" class="accent navbar-item">
-                        About
-                    </a>
+                    <a th:href="@{/about}" href="/about" class="accent navbar-item">About</a>
 
                     <hr class="navbar-divider">
 
-                    <a th:href="@{/pirate}" href="/pirate" class="accent navbar-item">
-                        Pirate
-                    </a>
+                    <a th:href="@{/pirate}" href="/pirate" class="accent navbar-item">Pirate</a>
                 </div>
             </div>
 
@@ -73,4 +60,3 @@
 </nav>
 </body>
 </html>
-```

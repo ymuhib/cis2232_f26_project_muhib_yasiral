@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/head :: head">
+  <title id="pageTitle" th:text="#{label.add.edit}">
+    Label Add/Edit
+  </title>
+</head>
+
+<body>
+
+<nav th:replace="fragments/navHeader :: navbar"></nav>
+
+<div class="container has-text-centered">
+
+  <!-- Add or Edit heading -->
+  <h2 class="title is-2"
+      th:if="${task.id != null}"
+      th:text="#{label.edit.order}">
+    Edit Task
+  </h2>
+
+  <h2 class="title is-2"
+      th:if="${task.id == null}"
+      th:text="#{label.add.order}">
+    Add Task
+  </h2>
+
+  <form th:object="${task}"
+        th:action="@{/task/submit}"
+        method="post"
+        class="wbb"
+        style="display:inline-block;text-align:left!important">
+
+    <!-- Hidden ID field -->
+    <input type="hidden" th:field="*{id}" />
+
+    <!-- Task Name -->
+    <p>
+      <label for="taskName">Task Name:</label>
+      <input type="text" th:field="*{taskName}"
+             id="taskName" />
+    </p>
+    <p class="cd"
+       th:if="${#fields.hasErrors('taskName')}"
+       th:errors="*{taskName}"></p>
+
+    <!-- Description -->
+    <p>
+      <label for="description">Description:</label>
+      <textarea th:field="*{description}"
+                id="description"></textarea>
+    </p>
+    <p class="cd"
+       th:if="${#fields.hasErrors('description')}"
+       th:errors="*{description}"></p>
+
+    <!-- Due Date -->
+    <p>
+      <label for="dueDate">Due Date:</label>
+      <input type="date" th:field="*{dueDate}"
+             id="dueDate" />
+    </p>
+    <p class="cd"
+       th:if="${#fields.hasErrors('dueDate')}"
+       th:errors="*{dueDate}"></p>
+
+    <!-- Estimated Time -->
+    <p>
+      <label for="estimatedTime">Estimated Time (minutes):</label>
+      <input type="number" th:field="*{estimatedTime}"
+             id="estimatedTime" min="0" />
+    </p>
+    <p class="cd"
+       th:if="${#fields.hasErrors('estimatedTime')}"
+       th:errors="*{estimatedTime}"></p>
+
+    <!-- Status -->
+    <p>
+      <label for="status">Status:</label>
+      <select th:field="*{status}" id="status">
+        <option value="">Select Status</option>
+        <option value="Undone">Undone</option>
+        <option value="Done">Done</option>
+      </select>
+    </p>
+    <p class="cd"
+       th:if="${#fields.hasErrors('status')}"
+       th:errors="*{status}"></p>
+
+    <!-- Notes -->
+    <p>
+      <label for="notes">Notes:</label>
+      <textarea th:field="*{notes}"
+                id="notes"></textarea>
+    </p>
+    <p class="cd"
+       th:if="${#fields.hasErrors('notes')}"
+       th:errors="*{notes}"></p>
+
+    <!-- Category -->
+    <p>
+      <label for="category">Category:</label>
+      <select th:field="*{category}" id="category">
+        <option value="">Select Category</option>
+        <option value="School">School</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+      </select>
+    </p>
+    <p class="cd"
+       th:if="${#fields.hasErrors('category')}"
+       th:errors="*{category}"></p>
+
+    <!-- Priority -->
+    <p>
+      <label for="priority">Priority:</label>
+      <select th:field="*{priority}" id="priority">
+        <option value="">Select Priority</option>
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+    </p>
+    <p class="cd"
+       th:if="${#fields.hasErrors('priority')}"
+       th:errors="*{priority}"></p>
+
+    <!-- Submit button -->
+    <button type="submit"
+            style="display:block;margin-top:24px!important"
+            class="centered"
+            th:text="#{label.submit}">
+      Submit
+    </button>
+
+  </form>
+
+</div>
+
+</body>
+</html>
